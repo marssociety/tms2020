@@ -26,9 +26,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<footer class="site-footer" id="colophon">
 
-					<div class="site-info row ml-4 mr-4">
+					<div class="site-info row">
 
-						<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+						<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 text-right">
 							<?php wp_nav_menu(
 								array(
 									'theme_location'  => 'footer0',
@@ -94,7 +94,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 p-0">
+						<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 p-0 text-right">
 							<?php if ( has_nav_menu( 'social' ) ) : ?>
 								<nav class="social-navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'tms2019' ); ?>">
 									<?php
@@ -110,6 +110,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 									?>
 								</nav><!-- .social-navigation -->
 							<?php endif; ?>
+
+							<a href="https://www.marssociety.org"><img src="/wp-content/themes/tms2020/img/tmslogo_full_dark_397x96.png"></a>
 						</div>
 
 					</div><!-- .site-info -->
