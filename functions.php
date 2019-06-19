@@ -170,6 +170,13 @@ function custom_excerpt_length( $length ) {
 	return 20;
 }
 
+function ea_primary_menu_extras( $menu, $args ) {
+    if( 'primary' == $args->theme_location )
+      $menu .= '<li class="menu-item search"><a href="#" class="search-toggle"><i class="icon-search"></i></a>' . get_search_form( false ) . '</li>';
+    return $menu;
+}
+add_filter( 'wp_nav_menu_items', 'ea_primary_menu_extras', 10, 2 );
+
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 require get_stylesheet_directory() . '/classes/class-tms2019-svg-icons.php';
 require get_stylesheet_directory() . '/inc/icon-functions.php';

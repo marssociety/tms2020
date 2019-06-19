@@ -62,14 +62,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 						'theme_location'  => 'primary',
 						'container_class' => 'collapse navbar-collapse',
 						'container_id'    => 'navbarNavDropdown',
-						'menu_class'      => 'navbar-nav nav-fill navbar-main',
+						'menu_class'      => 'navbar-nav nav-fill navbar-main w-100',
 						'fallback_cb'     => '',
 						'menu_id'         => 'main-menu',
 						'depth'           => 2,
 						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
 					)
                 ); ?>
-            <?php get_search_form(); ?>
 		</nav><!-- .site-navigation -->
 
 	</div><!-- #wrapper-navbar end -->

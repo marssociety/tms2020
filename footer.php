@@ -18,117 +18,110 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="wrapper-footer">
 
-	<div class="<?php echo esc_attr( $container ); ?>">
+	<footer class="site-footer" id="colophon">
 
-		<div class="row">
+		<div class="container-fixed ml-4 mr-4">
 
-			<div class="col-md-12">
+				<div class="site-info row m-0">
 
-				<footer class="site-footer" id="colophon">
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 pl-5">
+						<?php wp_nav_menu(
+							array(
+								'theme_location'  => 'footer0',
+								'container_class' => 'div',
+								'container_id'    => 'footer-primary',
+								'menu_class'      => 'footer-menu footer-main h-60 border-right border-secondary',
+								'fallback_cb'     => '',
+								'menu_id'         => '7',
+								'depth'           => 1,
+								'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+							)
+						); ?>
+					</div>
 
-					<div class="site-info row">
+					<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+						<div class="row">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+							<div class="footer-heading">The Society</div>
+								<?php wp_nav_menu(
+									array(
+										'theme_location'  => 'footer1',
+										'container_class' => 'div',
+										'container_id'    => 'footer1-menu',
+										'menu_class'      => 'footer-menu',
+										'fallback_cb'     => '',
+										'menu_id'         => '8',
+										'depth'           => 1,
+										'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+									)
+								); ?>
+							</div>
 
-						<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 text-right">
-							<?php wp_nav_menu(
-								array(
-									'theme_location'  => 'footer0',
-									'container_class' => 'div',
-									'container_id'    => 'footer-primary',
-									'menu_class'      => 'footer-menu footer-main h-60 border-right border-secondary',
-									'fallback_cb'     => '',
-									'menu_id'         => '7',
-									'depth'           => 1,
-									'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
-								)
-							); ?>
-						</div>
+							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="footer-heading">Projects</div>
+								<?php wp_nav_menu(
+									array(
+										'theme_location'  => 'footer2',
+										'container_class' => 'div',
+										'container_id'    => 'footer2-menu',
+										'menu_class'      => 'footer-menu',
+										'fallback_cb'     => '',
+										'menu_id'         => '9',
+										'depth'           => 1,
+										'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+									)
+								); ?>
+							</div>
 
-						<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-							<div class="row">
-								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-								<div class="footer-heading">The Society</div>
-									<?php wp_nav_menu(
-										array(
-											'theme_location'  => 'footer1',
-											'container_class' => 'div',
-											'container_id'    => 'footer1-menu',
-											'menu_class'      => 'footer-menu',
-											'fallback_cb'     => '',
-											'menu_id'         => '8',
-											'depth'           => 1,
-											'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
-										)
-									); ?>
-								</div>
-
-								<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-								<div class="footer-heading">Projects</div>
-									<?php wp_nav_menu(
-										array(
-											'theme_location'  => 'footer2',
-											'container_class' => 'div',
-											'container_id'    => 'footer2-menu',
-											'menu_class'      => 'footer-menu',
-											'fallback_cb'     => '',
-											'menu_id'         => '9',
-											'depth'           => 1,
-											'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
-										)
-									); ?>
-								</div>
-
-								<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-								<div class="footer-heading">Education &amp; Outreach</div>
-									<?php wp_nav_menu(
-										array(
-											'theme_location'  => 'footer3',
-											'container_class' => 'div',
-											'container_id'    => 'footer3-menu',
-											'menu_class'      => 'footer-menu',
-											'fallback_cb'     => '',
-											'menu_id'         => '10',
-											'depth'           => 1,
-											'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
-										)
-									); ?>
-								</div>
+							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="footer-heading">Education &amp; Outreach</div>
+								<?php wp_nav_menu(
+									array(
+										'theme_location'  => 'footer3',
+										'container_class' => 'div',
+										'container_id'    => 'footer3-menu',
+										'menu_class'      => 'footer-menu',
+										'fallback_cb'     => '',
+										'menu_id'         => '10',
+										'depth'           => 1,
+										'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+									)
+								); ?>
 							</div>
 						</div>
-						<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 p-0 text-right">
-							<?php if ( has_nav_menu( 'social' ) ) : ?>
-								<nav class="social-navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'tms2019' ); ?>">
-									<?php
-									wp_nav_menu(
-										array(
-											'theme_location' => 'social',
-											'menu_class'     => 'social-links-menu footer-menu',
-											'link_before'    => '<span class="screen-reader-text">',
-											'link_after'     => '</span>' . tms2019_get_icon_svg( 'link' ),
-											'depth'          => 1,
-										)
-									);
-									?>
-								</nav><!-- .social-navigation -->
-							<?php endif; ?>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 pr-4 text-right">
+						<?php if ( has_nav_menu( 'social' ) ) : ?>
+							<nav class="social-navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'tms2019' ); ?>">
+								<?php
+								wp_nav_menu(
+									array(
+										'theme_location' => 'social',
+										'menu_class'     => 'social-links-menu footer-menu mb-5',
+										'link_before'    => '<span class="screen-reader-text">',
+										'link_after'     => '</span>' . tms2019_get_icon_svg( 'link' ),
+										'depth'          => 1,
+									)
+								);
+								?>
+							</nav><!-- .social-navigation -->
+						<?php endif; ?>
 
-							<a href="https://www.marssociety.org"><img src="/wp-content/themes/tms2020/img/tmslogo_full_dark_397x96.png"></a>
-						</div>
+						<a href="https://www.marssociety.org"><img src="/wp-content/themes/tms2020/img/tmslogo_full_dark_397x96.png" class="mt-5"></a>
+					</div>
 
-					</div><!-- .site-info -->
+				</div><!-- .site-info -->
 
-				</footer><!-- #colophon -->
+				<div class="row">
+					<div class="col-md-12 col-sm-12 text-center footer-bottom-links">
+						<a href="#">Privacy Policy</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
+						<a href="#">Anti-Discrimination Policy</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+						Copyright &copy; 1998-2019 The Mars Society. All Rights Reserved.
+					</div>
+				</div>
+		</div><!-- container end -->
 
-			</div><!--col end -->
-
-		</div><!-- row end -->
-		<div class="row">
-			<div class="col-md-12 col-sm-12 text-center footer-bottom-links">
-				<a href="#">Privacy Policy</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
-				<a href="#">Anti-Discrimination Policy</a> &nbsp;&nbsp;|&nbsp;&nbsp;
-				Copyright &copy; 1998-2019 The Mars Society. All Rights Reserved.
-			</div>
-		</div>
-	</div><!-- container end -->
+	</footer><!-- #colophon -->
 
 </div><!-- wrapper end -->
 
