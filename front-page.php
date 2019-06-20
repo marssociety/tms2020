@@ -168,7 +168,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div class="front-page-container container-fixed newsletter-signup-section ml-0 mr-0 mt-0 mb-3 p-4">
 		<div class="row">
 			<div class="col m-3 newsletter-title">
-				<h2>Be part of the worldwide effort<br/>to send humans to Mars.</h2>
+				<h2 class="text-center"><span class="rwd-line">Be part of the worldwide effort</span> <span class="rwd-line">to send humans to Mars.</span></h2>
 				<div>
 					<a class="btn btn-newsletter" type="button" href="#">Subscribe to the Newsletter</a>
 				</div>
@@ -182,7 +182,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<h2 class="front-page-header">Projects</h2>
 			</div><!-- col -->
 		</div><!-- row -->
-		<div class="row">
+		<div class="row m-0">
 	<?php
 		$args = array(
 			'post_type' => 'projects',
@@ -203,22 +203,24 @@ $container = get_theme_mod( 'understrap_container_type' );
 			?>
 			<div class="col-md-6 col-sm-12">
 				<div class="card project">
-					<div class="container w-100 row m-0 p-0">
-						<div class="col-md-5 col-xs-5 m-0 p-0">
-							<a href="<?php the_field('project_website_url'); ?>"><img src="<?php echo $project_image;  ?>" class="project-detail w-100 img-fluid border-0 m-0 p-0"></a>
-						</div>
-						<div class="col-md-5 col-xs-5 text-center mt-auto mb-auto project-title">
-							<a href="<?php the_field('project_website_url'); ?>"><h2><?php echo $title; ?></h2></a>
-						</div>
-						<div class="col-md-2 col-xs-2 text-center mt-auto mb-auto">
-							<a href="<?php the_field('project_website_url'); ?>"><i class="fa fa-chevron-right fa-3x tms-red"></i></a>
+					<div class="container-fixed w-100 m-0 p-0">
+						<div class="row m-0">
+							<div class="col-5 col-md-6 col-xs-2 p-0">
+								<a href="<?php the_field('project_website_url'); ?>"><img src="<?php echo $project_image;  ?>" class="project-detail w-100 img-fluid border-0 m-0 p-0"></a>
+							</div>
+							<div class="col-5 col-md-5 col-xs-5 text-center mt-auto mb-auto project-title">
+								<a href="<?php the_field('project_website_url'); ?>"><h2><?php echo $title; ?></h2></a>
+							</div>
+							<div class="col-2 col-md-1 col-xs-2 text-center mt-auto mb-auto">
+								<a href="<?php the_field('project_website_url'); ?>"><i class="fa fa-chevron-right fa-2x tms-red"></i></a>
+							</div>
 						</div>
 					</div>
 				</div>		
 			</div>
 		<?php if ($i % 2 == 0) : ?>
 		</div>
-		<div class="row mt-3">	
+		<div class="row m-0 second-project-row">	
 		<?php endif;
 			endwhile;
 			wp_reset_postdata();

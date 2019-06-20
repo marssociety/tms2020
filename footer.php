@@ -20,17 +20,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<footer class="site-footer" id="colophon">
 
-		<div class="container-fixed ml-4 mr-4">
+		<div class="container-fixed footer-container">
 
 				<div class="site-info row m-0">
 
-					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 pl-5">
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 footer-primary-div">
 						<?php wp_nav_menu(
 							array(
 								'theme_location'  => 'footer0',
 								'container_class' => 'div',
 								'container_id'    => 'footer-primary',
-								'menu_class'      => 'footer-menu footer-main h-60 border-right border-secondary',
+								'menu_class'      => 'footer-menu footer-main border-right border-secondary',
 								'fallback_cb'     => '',
 								'menu_id'         => '7',
 								'depth'           => 1,
@@ -42,11 +42,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
 						<div class="row">
 							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-							<div class="footer-heading">The Society</div>
+							<div class="footer-heading">
+								<span>The Society
+									<i class="footer-toggler fa fa-plus tms-red pl-2" data-toggle="collapse" data-target="#footer1-menu" aria-controls="footer1-menu" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>"></i>
+								</span>
+							</div>
 								<?php wp_nav_menu(
 									array(
 										'theme_location'  => 'footer1',
-										'container_class' => 'div',
+										'container_class' => 'div collapse dont-collapse-sm',
 										'container_id'    => 'footer1-menu',
 										'menu_class'      => 'footer-menu',
 										'fallback_cb'     => '',
@@ -56,13 +60,16 @@ $container = get_theme_mod( 'understrap_container_type' );
 									)
 								); ?>
 							</div>
-
 							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-							<div class="footer-heading">Projects</div>
+							<div class="footer-heading">
+								<span>Projects
+									<i class="footer-toggler fa fa-plus tms-red pl-2" data-toggle="collapse" data-target="#footer2-menu" aria-controls="footer2-menu" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>"></i>
+								</span>
+							</div>
 								<?php wp_nav_menu(
 									array(
 										'theme_location'  => 'footer2',
-										'container_class' => 'div',
+										'container_class' => 'div collapse dont-collapse-sm',
 										'container_id'    => 'footer2-menu',
 										'menu_class'      => 'footer-menu',
 										'fallback_cb'     => '',
@@ -74,11 +81,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 							</div>
 
 							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-							<div class="footer-heading">Education &amp; Outreach</div>
+							<div class="footer-heading">
+								<span>Education &amp; Outreach
+									<i class="footer-toggler fa fa-plus tms-red pl-2" data-toggle="collapse" data-target="#footer3-menu" aria-controls="footer3-menu" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>"></i>
+								</span>
+							</div>
 								<?php wp_nav_menu(
 									array(
 										'theme_location'  => 'footer3',
-										'container_class' => 'div',
+										'container_class' => 'div collapse dont-collapse-sm',
 										'container_id'    => 'footer3-menu',
 										'menu_class'      => 'footer-menu',
 										'fallback_cb'     => '',
@@ -92,12 +103,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</div>
 					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 pr-4 text-right">
 						<?php if ( has_nav_menu( 'social' ) ) : ?>
-							<nav class="social-navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'tms2019' ); ?>">
+							<nav class="social-navigation social-navigation-footer" aria-label="<?php esc_attr_e( 'Social Links Menu', 'tms2019' ); ?>">
 								<?php
 								wp_nav_menu(
 									array(
 										'theme_location' => 'social',
-										'menu_class'     => 'social-links-menu footer-menu mb-5',
+										'menu_class'     => 'social-links-menu footer-menu',
 										'link_before'    => '<span class="screen-reader-text">',
 										'link_after'     => '</span>' . tms2019_get_icon_svg( 'link' ),
 										'depth'          => 1,
@@ -107,7 +118,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							</nav><!-- .social-navigation -->
 						<?php endif; ?>
 
-						<a href="https://www.marssociety.org"><img src="/wp-content/themes/tms2020/img/tmslogo_full_dark_397x96.png" class="mt-5"></a>
+						<a href="https://www.marssociety.org"><img class="footer-branding" src="/wp-content/themes/tms2020/img/tmslogo_full_dark_397x96.png"></a>
 					</div>
 
 				</div><!-- .site-info -->
