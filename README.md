@@ -1,4 +1,4 @@
-# tms2019 Readme File
+# tms2020 Readme File
 # Author: James Burk <jburk@marssociety.org>
 This is the new custom theme for The Mars Society's news design & style guidelines created in 2019, built for Wordpress.
 It is based on the Basic Child Theme for UnderStrap Theme Framework: https://github.com/understrap/understrap
@@ -13,19 +13,19 @@ Understrap Child Theme uses the Enqueue method to load and sort the CSS file the
 ## Installation
 1. Install the parent theme UnderStrap first: `https://github.com/understrap/understrap`
    - IMPORTANT: If you download UnderStrap from GitHub make sure you rename the "understrap-master.zip" file to "understrap.zip" or you might have problems using this child theme!
-1. Upload the tms2019 folder to your wp-content/themes directory
+1. Upload the tms2020 folder to your wp-content/themes directory
 1. Go into your WP admin backend 
 1. Go to "Appearance -> Themes"
-1. Activate the TMS2019 theme
+1. Activate the tms2020 theme
 
 ## Editing
 Our CSS styles live in:
-`/sass/theme/_tms2019.scss`
+`/sass/theme/_tms2020.scss`
 To overwrite Bootstrap's or UnderStrap's base variables just add your own value to:
-`/sass/theme/_tms2019_variables.scss`
+`/sass/theme/_tms2020_variables.scss`
 
 Using gulp, it will be outputted into:
-`/css/tms2019.min.css` and `/css/tms2019.css`
+`/css/tms2020.min.css` and `/css/tms2020.css`
 
 So we have one clean CSS file at the end and just one request.
 

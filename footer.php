@@ -103,14 +103,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</div>
 					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 pr-4 text-right">
 						<?php if ( has_nav_menu( 'social' ) ) : ?>
-							<nav class="social-navigation social-navigation-footer" aria-label="<?php esc_attr_e( 'Social Links Menu', 'tms2019' ); ?>">
+							<nav class="social-navigation social-navigation-footer" aria-label="<?php esc_attr_e( 'Social Links Menu', 'tms2020' ); ?>">
 								<?php
 								wp_nav_menu(
 									array(
 										'theme_location' => 'social',
 										'menu_class'     => 'social-links-menu footer-menu',
 										'link_before'    => '<span class="screen-reader-text">',
-										'link_after'     => '</span>' . tms2019_get_icon_svg( 'link' ),
+										'link_after'     => '</span>' . tms2020_get_icon_svg( 'link' ),
 										'depth'          => 1,
 									)
 								);

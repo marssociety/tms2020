@@ -132,7 +132,7 @@ if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
 	 */
 	function understrap_all_excerpts_get_more_link( $post_excerpt ) {
 		if ( ! is_admin() ) {
-			$post_excerpt = $post_excerpt . '... <a class="tms2019-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'READ MORE >',
+			$post_excerpt = $post_excerpt . '... <a class="tms2020-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'READ MORE >',
 			'understrap' ) . '</a>';
 		}
 		return $post_excerpt;

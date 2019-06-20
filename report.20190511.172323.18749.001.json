@@ -202,7 +202,7 @@
     "WSL_DISTRO_NAME": "Ubuntu-18.04",
     "USER": "jburk",
     "RBENV_SHELL": "bash",
-    "PWD": "/home/jburk/Sites/v6/wp-content/themes/tms2019",
+    "PWD": "/home/jburk/Sites/v6/wp-content/themes/tms2020",
     "_system_version": "18.04",
     "HOME": "/home/jburk",
     "_system_name": "Ubuntu",
@@ -223,7 +223,7 @@
     "WSLENV": "",
     "LESSOPEN": "| /usr/bin/lesspipe %s",
     "_": "/usr/local/bin/gulp",
-    "INIT_CWD": "/mnt/d/Sites/v6/wp-content/themes/tms2019"
+    "INIT_CWD": "/mnt/d/Sites/v6/wp-content/themes/tms2020"
   },
   "userLimits": {
     "core_file_size_blocks": {
@@ -277,7 +277,7 @@
     "/lib/x86_64-linux-gnu/libpthread.so.0",
     "/lib/x86_64-linux-gnu/libc.so.6",
     "/lib64/ld-linux-x86-64.so.2",
-    "/mnt/d/Sites/v6/wp-content/themes/tms2019/node_modules/node-sass/vendor/linux-x64-67/binding.node",
+    "/mnt/d/Sites/v6/wp-content/themes/tms2020/node_modules/node-sass/vendor/linux-x64-67/binding.node",
     "/lib/x86_64-linux-gnu/libnss_files.so.2"
   ]
 }

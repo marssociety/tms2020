@@ -18,7 +18,7 @@
  *
  * @since 1.0.0
  */
-class tms2019_SVG_Icons {
+class tms2020_SVG_Icons {
 	/**
 	 * Gets the SVG code for a given icon.
 	 */

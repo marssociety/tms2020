@@ -201,7 +201,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			$project_image = $featured_image[0];
 			// Output
 			?>
-			<div class="col-md-6 col-sm-12">
+			<div class="col-md-6 col-sm-12 p-0">
 				<div class="card project">
 					<div class="container-fixed w-100 m-0 p-0">
 						<div class="row m-0">

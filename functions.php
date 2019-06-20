@@ -27,43 +27,43 @@ function theme_enqueue_styles() {
     }
 }
 
-function add_child_theme_tms2019() {
+function add_child_theme_tms2020() {
     load_child_theme_textdomain( 'understrap-child', get_stylesheet_directory() . '/languages' );
 }
-add_action( 'after_setup_theme', 'add_child_theme_tms2019' );
+add_action( 'after_setup_theme', 'add_child_theme_tms2020' );
 
 // Register Custom Post Types
 add_action('init', 'register_custom_posts_init');
 function register_custom_posts_init() {
     // Register Projects
     $projects_labels = array(
-		'name'                  => _x( 'Projects', 'Post Type General Name', 'tms2019' ),
-		'singular_name'         => _x( 'Project', 'Post Type Singular Name', 'tms2019' ),
-		'menu_name'             => __( 'Projects', 'tms2019' ),
-		'name_admin_bar'        => __( 'Projects', 'tms2019' ),
-		'archives'              => __( 'Project Archives', 'tms2019' ),
-		'attributes'            => __( 'Project Attributes', 'tms2019' ),
-		'parent_item_colon'     => __( 'Parent Project:', 'tms2019' ),
-		'all_items'             => __( 'All Projects', 'tms2019' ),
-		'add_new_item'          => __( 'Add New Project', 'tms2019' ),
-		'add_new'               => __( 'Add Project', 'tms2019' ),
-		'new_item'              => __( 'New Project', 'tms2019' ),
-		'edit_item'             => __( 'Edit Project', 'tms2019' ),
-		'update_item'           => __( 'Update Project', 'tms2019' ),
-		'view_item'             => __( 'View Project', 'tms2019' ),
-		'view_items'            => __( 'View Projects', 'tms2019' ),
-		'search_items'          => __( 'Search Project', 'tms2019' ),
-		'not_found'             => __( 'Not found', 'tms2019' ),
-		'not_found_in_trash'    => __( 'Not found in Trash', 'tms2019' ),
-		'featured_image'        => __( 'Featured Image', 'tms2019' ),
-		'set_featured_image'    => __( 'Set featured image', 'tms2019' ),
-		'remove_featured_image' => __( 'Remove featured image', 'tms2019' ),
-		'use_featured_image'    => __( 'Use as featured image', 'tms2019' ),
-		'insert_into_item'      => __( 'Insert into Project', 'tms2019' ),
-		'uploaded_to_this_item' => __( 'Uploaded to this item', 'tms2019' ),
-		'items_list'            => __( 'Project list', 'tms2019' ),
-		'items_list_navigation' => __( 'Project list navigation', 'tms2019' ),
-        'filter_items_list'     => __( 'Filter Project list', 'tms2019' ),
+		'name'                  => _x( 'Projects', 'Post Type General Name', 'tms2020' ),
+		'singular_name'         => _x( 'Project', 'Post Type Singular Name', 'tms2020' ),
+		'menu_name'             => __( 'Projects', 'tms2020' ),
+		'name_admin_bar'        => __( 'Projects', 'tms2020' ),
+		'archives'              => __( 'Project Archives', 'tms2020' ),
+		'attributes'            => __( 'Project Attributes', 'tms2020' ),
+		'parent_item_colon'     => __( 'Parent Project:', 'tms2020' ),
+		'all_items'             => __( 'All Projects', 'tms2020' ),
+		'add_new_item'          => __( 'Add New Project', 'tms2020' ),
+		'add_new'               => __( 'Add Project', 'tms2020' ),
+		'new_item'              => __( 'New Project', 'tms2020' ),
+		'edit_item'             => __( 'Edit Project', 'tms2020' ),
+		'update_item'           => __( 'Update Project', 'tms2020' ),
+		'view_item'             => __( 'View Project', 'tms2020' ),
+		'view_items'            => __( 'View Projects', 'tms2020' ),
+		'search_items'          => __( 'Search Project', 'tms2020' ),
+		'not_found'             => __( 'Not found', 'tms2020' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'tms2020' ),
+		'featured_image'        => __( 'Featured Image', 'tms2020' ),
+		'set_featured_image'    => __( 'Set featured image', 'tms2020' ),
+		'remove_featured_image' => __( 'Remove featured image', 'tms2020' ),
+		'use_featured_image'    => __( 'Use as featured image', 'tms2020' ),
+		'insert_into_item'      => __( 'Insert into Project', 'tms2020' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', 'tms2020' ),
+		'items_list'            => __( 'Project list', 'tms2020' ),
+		'items_list_navigation' => __( 'Project list navigation', 'tms2020' ),
+        'filter_items_list'     => __( 'Filter Project list', 'tms2020' ),
         );
     $projects_args = array(
         'labels'             => $projects_labels,
@@ -76,33 +76,33 @@ function register_custom_posts_init() {
     register_post_type('projects', $projects_args);
 
     $videos_labels = array(
-		'name'                  => _x( 'Videos', 'Post Type General Name', 'tms2019' ),
-		'singular_name'         => _x( 'Video', 'Post Type Singular Name', 'tms2019' ),
-		'menu_name'             => __( 'Videos', 'tms2019' ),
-		'name_admin_bar'        => __( 'Videos', 'tms2019' ),
-		'archives'              => __( 'Video Archives', 'tms2019' ),
-		'attributes'            => __( 'Video Attributes', 'tms2019' ),
-		'parent_item_colon'     => __( 'Parent Video:', 'tms2019' ),
-		'all_items'             => __( 'All Videos', 'tms2019' ),
-		'add_new_item'          => __( 'Add New Video', 'tms2019' ),
-		'add_new'               => __( 'Add Video', 'tms2019' ),
-		'new_item'              => __( 'New Video', 'tms2019' ),
-		'edit_item'             => __( 'Edit Video', 'tms2019' ),
-		'update_item'           => __( 'Update Video', 'tms2019' ),
-		'view_item'             => __( 'View Video', 'tms2019' ),
-		'view_items'            => __( 'View Videos', 'tms2019' ),
-		'search_items'          => __( 'Search Video', 'tms2019' ),
-		'not_found'             => __( 'No Videos found', 'tms2019' ),
-		'not_found_in_trash'    => __( 'No Videos found in Trash', 'tms2019' ),
-		'featured_image'        => __( 'Featured Image', 'tms2019' ),
-		'set_featured_image'    => __( 'Set featured image', 'tms2019' ),
-		'remove_featured_image' => __( 'Remove featured image', 'tms2019' ),
-		'use_featured_image'    => __( 'Use as featured image', 'tms2019' ),
-		'insert_into_item'      => __( 'Insert into Video', 'tms2019' ),
-		'uploaded_to_this_item' => __( 'Uploaded to this item', 'tms2019' ),
-		'items_list'            => __( 'Video list', 'tms2019' ),
-		'items_list_navigation' => __( 'Video list navigation', 'tms2019' ),
-        'filter_items_list'     => __( 'Filter Video list', 'tms2019' ),
+		'name'                  => _x( 'Videos', 'Post Type General Name', 'tms2020' ),
+		'singular_name'         => _x( 'Video', 'Post Type Singular Name', 'tms2020' ),
+		'menu_name'             => __( 'Videos', 'tms2020' ),
+		'name_admin_bar'        => __( 'Videos', 'tms2020' ),
+		'archives'              => __( 'Video Archives', 'tms2020' ),
+		'attributes'            => __( 'Video Attributes', 'tms2020' ),
+		'parent_item_colon'     => __( 'Parent Video:', 'tms2020' ),
+		'all_items'             => __( 'All Videos', 'tms2020' ),
+		'add_new_item'          => __( 'Add New Video', 'tms2020' ),
+		'add_new'               => __( 'Add Video', 'tms2020' ),
+		'new_item'              => __( 'New Video', 'tms2020' ),
+		'edit_item'             => __( 'Edit Video', 'tms2020' ),
+		'update_item'           => __( 'Update Video', 'tms2020' ),
+		'view_item'             => __( 'View Video', 'tms2020' ),
+		'view_items'            => __( 'View Videos', 'tms2020' ),
+		'search_items'          => __( 'Search Video', 'tms2020' ),
+		'not_found'             => __( 'No Videos found', 'tms2020' ),
+		'not_found_in_trash'    => __( 'No Videos found in Trash', 'tms2020' ),
+		'featured_image'        => __( 'Featured Image', 'tms2020' ),
+		'set_featured_image'    => __( 'Set featured image', 'tms2020' ),
+		'remove_featured_image' => __( 'Remove featured image', 'tms2020' ),
+		'use_featured_image'    => __( 'Use as featured image', 'tms2020' ),
+		'insert_into_item'      => __( 'Insert into Video', 'tms2020' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', 'tms2020' ),
+		'items_list'            => __( 'Video list', 'tms2020' ),
+		'items_list_navigation' => __( 'Video list navigation', 'tms2020' ),
+        'filter_items_list'     => __( 'Filter Video list', 'tms2020' ),
 		);
 
 	$videos_rewrite = array(
@@ -156,11 +156,11 @@ function add_my_post_types_to_query( $query ) {
 function register_custom_menus() {
     register_nav_menus(
         array(
-            'footer0' => __( 'Footer Main Menu', 'tms2019' ),
-            'footer1' => __( 'Footer 1 Menu', 'tms2019' ),
-            'footer2' => __( 'Footer 2 Menu', 'tms2019' ),
-            'footer3' => __( 'Footer 3 Menu', 'tms2019' ),
-            'social' => __( 'Social Links Menu', 'tms2019' ),
+            'footer0' => __( 'Footer Main Menu', 'tms2020' ),
+            'footer1' => __( 'Footer 1 Menu', 'tms2020' ),
+            'footer2' => __( 'Footer 2 Menu', 'tms2020' ),
+            'footer3' => __( 'Footer 3 Menu', 'tms2020' ),
+            'social' => __( 'Social Links Menu', 'tms2020' ),
         )
     );
 }
@@ -178,7 +178,7 @@ function ea_primary_menu_extras( $menu, $args ) {
 add_filter( 'wp_nav_menu_items', 'ea_primary_menu_extras', 10, 2 );
 
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
-require get_stylesheet_directory() . '/classes/class-tms2019-svg-icons.php';
+require get_stylesheet_directory() . '/classes/class-tms2020-svg-icons.php';
 require get_stylesheet_directory() . '/inc/icon-functions.php';
 
 add_theme_support( 'post-thumbnails' );
