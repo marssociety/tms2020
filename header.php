@@ -55,7 +55,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                <?php endif; ?>
 
             </nav>
-            <nav class="navbar navbar-expand-md navbar-light">
+            <nav class="navbar navbar-expand-md navbar-light border-bottom">
                 <!-- The WordPress Menu goes here -->
 				<?php wp_nav_menu(
 					array(

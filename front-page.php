@@ -170,7 +170,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="col m-3 newsletter-title">
 				<h2 class="text-center"><span class="rwd-line">Be part of the worldwide effort</span> <span class="rwd-line">to send humans to Mars.</span></h2>
 				<div>
-					<a class="btn btn-newsletter" type="button" href="#">Subscribe to the Newsletter</a>
+					<a class="btn btn-newsletter" type="button" href="http://eepurl.com/bDvsxD">Subscribe to our Newsletter</a>
 				</div>
 			</div><!-- col -->
 		</div><!-- row -->

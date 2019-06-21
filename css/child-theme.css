@@ -11583,6 +11583,7 @@ a.skip-link {
 .gallery-caption {
   display: block; }
 
+/* HEADER & FRONT PAGE */
 body.admin-bar .navbar-fixed-top {
   top: 32px !important; }
 
@@ -11839,7 +11840,8 @@ newsletter-title {
   color: #fff; }
 
 .project {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  margin-right: 15px; }
 
 .project-container {
   margin: 0 40px 0 40px; }
@@ -11990,7 +11992,8 @@ newsletter-title {
     font-size: 11pt;
     margin-bottom: 0; }
   .project {
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    margin-right: 0; }
   .site-info row col {
     padding: 0; }
   .second-project-row {
@@ -12029,5 +12032,9 @@ newsletter-title {
     padding: 10px; }
   .footer-branding {
     margin: 0; } }
+
+/* SINGLE PAGE */
+.post {
+  margin: 0 15px; }
 
 /*# sourceMappingURL=child-theme.css.map */
