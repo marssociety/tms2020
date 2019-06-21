@@ -17,9 +17,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<div class="container-fixed" id="content" tabindex="-1">
 
-		<div class="row">
+		<div class="row m-0">
 
-			<div class="col-md content-area" id="primary">
+			<div class="col-md-8 content-area" id="primary">
 			
 			<main class="site-main" id="main">
 

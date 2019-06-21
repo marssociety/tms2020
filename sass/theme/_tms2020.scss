@@ -39,10 +39,9 @@ body {
 }
 
 .nav-link {
-  padding:10px 0 10px 40px !important;
+  padding:10px 0 !important;
   font-size:14pt !important;
   font-weight:700 !important;
-  font-smooth: 2em !important;
 }
 
 a.nav-link:hover {
@@ -65,14 +64,6 @@ a.nav-link:hover {
     border-color: white;
     margin-right:3px;
   } 
-
-  /* Social menu */
-/* .social-navigation {
-   margin-top: calc(1rem / 4);
-    float: right;
-    padding-right:10px;
-  }
-*/
 
 .social-navigation ul.social-links-menu {
   content: "";
@@ -127,7 +118,7 @@ a.nav-link:hover {
 .search { position:relative; }
 .search .search-input-elm { position:absolute; top:5; right: 10px;  display: none; width: 220px;}
 
-.search .search-btn {background:transparent;border:0;margin-top: 2px; margin-right:5px; float:right;  }
+.search .search-btn {background:transparent;border:0; margin-right:8px; float:right;  }
 .search .search-input{
     width: 100%;
     background: #fff;
@@ -146,8 +137,8 @@ a.nav-link:hover {
 
 .search-submit {
     position: absolute;
-    top: 5px;
-    right: 6px;
+    top: 3px;
+    right: 9px;
     padding:2px 0;
     z-index:999;
     outline: 0;
@@ -212,13 +203,6 @@ a.tms2020-read-more-link {
 .video-highlights-section {
   background-color:#ccc;
   padding:0 40px 0 40px;
-}
-
-#featured-video {
-}
-
-#featured-video .video-meta {
-      
 }
 
 .video {
@@ -308,9 +292,6 @@ newsletter-title {
 
 .project-title a:hover {
   text-decoration:none;
-}
-
-.project-detail {
 }
 
 .project-detail:hover {
@@ -563,9 +544,13 @@ newsletter-title {
 /* SINGLE PAGE */
 
 .post {
-  margin:0 15px;
+  padding:0;
 }
 
+.post .entry-title {
+  text-transform:uppercase;
+  font-size:24pt;
+}
 
 @media screen and (max-width: 768px) {
 
