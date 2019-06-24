@@ -32,6 +32,7 @@ function add_child_theme_tms2020() {
 }
 add_action( 'after_setup_theme', 'add_child_theme_tms2020' );
 
+
 // Register Custom Post Types
 add_action('init', 'register_custom_posts_init');
 function register_custom_posts_init() {
@@ -184,3 +185,36 @@ require get_stylesheet_directory() . '/inc/icon-functions.php';
 add_theme_support( 'post-thumbnails' );
 add_image_size( 'front-post-thumbnail', 375, 280, true );
 add_image_size( 'front-featured-post-thumbnail', 815, 455, true );
+add_image_size( 'single-post-thumbnail', 815, 455, true );
+add_image_size( 'related-post-thumbnail', 543, 303, true );
+
+
+function remove_img_attr ($html)
+{
+    return preg_replace('/(width|height)="\d+"\s/', "", $html);
+}
+add_filter( 'post_thumbnail_html', 'remove_img_attr' );
+
+function tms2020_post_nav() {
+	// Don't print empty markup if there's nowhere to navigate.
+	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
+	$next     = get_adjacent_post( false, '', false );
+	if ( ! $next && ! $previous ) {
+		return;
+	}
+	?>
+	<nav class="container navigation post-navigation">
+		<h2 class="sr-only"><?php esc_html_e( 'Post navigation', 'understrap' ); ?></h2>
+		<div class="row nav-links justify-content-between">
+			<?php
+			if ( get_previous_post_link() ) {
+				previous_post_link( '<span class="nav-previous">%link</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'understrap' ) );
+			}
+			if ( get_next_post_link() ) {
+				next_post_link( '<span class="nav-next">%link</span>', _x( '%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'understrap' ) );
+			}
+			?>
+		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	<?php
+}
