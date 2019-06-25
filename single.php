@@ -38,7 +38,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					$tags = wp_get_post_terms( get_queried_object_id(), 'post_tag', ['fields' => 'ids'] );
 					$args = [
 						'post__not_in'        => array( get_queried_object_id() ),
-						'posts_per_page'      => 5,
+						'posts_per_page'      => 3,
 						'ignore_sticky_posts' => 1,
 						'tax_query' => [
 							[
@@ -48,26 +48,34 @@ $container = get_theme_mod( 'understrap_container_type' );
 						]
 					];
 					$my_query = new wp_query( $args );
-					if( $my_query->have_posts() ) {
-						echo '<div class="related-posts"><h3>Related Posts</h3>';
-							while( $my_query->have_posts() ) {
+					if( $my_query->have_posts() ) { ?>
+						<div class="related-posts"><h2>Related News & Announcements</h2>
+							<div class="container-fixed">
+								<div class="row">
+						<?php
+							$i=0;
+							while( $my_query->have_posts() ):
 								$my_query->the_post(); ?>
 
-								<div class="relatedthumb"><a href="<? the_permalink()?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_post_thumbnail('related-post-thumbnail'); ?></a></div>
-									<div class="relatedcontent">
-									<h3><a href="<? the_permalink()?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
-									<?php the_time('M j, Y') ?>
+								<div class="col-4 col-md-4">
+									<div class="relatedthumb"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_post_thumbnail('related-post-thumbnail'); ?></a></div>
+										<div class="relatedcontent">
+										<h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+										<?php the_excerpt(); ?>
+									</div>
 								</div>
-									<h4><a href="<?php the_permalink()?>" rel="bookmark" title="<?php the_title(); ?>" rel="nofollow"><?php the_title(); ?></a></h4>
-									<?php the_excerpt(); ?>
-
-							<?php }
+						<?php
+							endwhile;
 							wp_reset_postdata();
-						echo '</div><!--related-->';
 					}
 					?> 
+							</div><!--row-->
+						</div><!--container-->
+					</div><!--related-->
 
-				<?php endwhile; // end of the loop. ?>
+				<?php
+						$i++;
+						endwhile; // end of the loop. ?>
 
 			</main><!-- #main -->
 

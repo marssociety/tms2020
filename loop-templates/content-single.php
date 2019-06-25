@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<div class="container row entry-meta m-0 p-0">
 			<div class="col-3 col-md-3 pl-0">
-				<?php tms2020_posted_on(); ?>
+				<?php understrap_posted_on(); ?>
 			</div>
 			<div class="col-6 col-md-6 post-tags p-0 text-center"><?php the_tags('<i class="fa fa-tag"></i> ', ', '); ?></div>
 			<div class="col-3 col-md-3 post-category pr-0 mr-0 text-right">
@@ -28,7 +28,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</header><!-- .entry-header -->
 
 	<div class="entry-content mt-3">
-		<?php the_post_thumbnail('single-post-thumbnail', ['class' => 'pl-3 rounded float-right', 'title' => 'Featured image']); ?>
+		<?php $imageurl = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-thumbnail' ); ?>
+		<a href="<?php echo $imageurl[0]; ?>"><?php the_post_thumbnail('single-post-thumbnail', ['class' => 'pl-3 float-right', 'title' => 'Featured image']); ?></a>
 
 		<?php the_content(); ?>
 
@@ -45,7 +46,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<footer class="entry-footer">
 
-		<?php tms2020_entry_footer(); ?>
+		<?php understrap_entry_footer(); ?>
 
 	</footer><!-- .entry-footer -->
 

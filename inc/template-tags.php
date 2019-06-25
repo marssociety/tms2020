@@ -11,8 +11,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-if ( ! function_exists( 'tms2020_posted_on' ) ) {
-	function tms2020_posted_on() {
+if ( ! function_exists( 'understrap_posted_on' ) ) {
+	function understrap_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		$time_string = sprintf( $time_string,
 			esc_attr( get_the_date( 'c' ) ),
@@ -21,7 +21,7 @@ if ( ! function_exists( 'tms2020_posted_on' ) ) {
 			esc_html( get_the_modified_date() )
 		);
 		$posted_on   = apply_filters(
-			'tms2020_posted_on', sprintf(
+			'understrap_posted_on', sprintf(
 				'<span class="posted-on">%1$s %3$s</span>',
 				esc_html_x( '', 'post date', 'tms2020' ),
 				esc_url( get_permalink() ),
@@ -37,7 +37,7 @@ if ( ! function_exists( 'tms2020_posted_on' ) ) {
  * Prints HTML with meta information for the categories, tags and comments.
  */
 if ( ! function_exists( 'understrap_entry_footer' ) ) {
-	function tms2020_entry_footer() {
+	function understrap_entry_footer() {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 		}
@@ -46,15 +46,6 @@ if ( ! function_exists( 'understrap_entry_footer' ) ) {
 			comments_popup_link( esc_html__( 'Leave a comment', 'understrap' ), esc_html__( '1 Comment', 'understrap' ), esc_html__( '% Comments', 'understrap' ) );
 			echo '</span>';
 		}
-		edit_post_link(
-			sprintf(
-				/* translators: %s: Name of current post */
-				esc_html__( 'Edit %s', 'understrap' ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			),
-			'<span class="btn btn-primary edit-link pl-4 pr-4">',
-			'</span>'
-		);
 	}
 }
 

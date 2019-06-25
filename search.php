@@ -17,12 +17,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="search-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+	<div class="container-full ml-4 mr-4" id="content" tabindex="-1">
 
-		<div class="row">
+	<div class="row m-0">
 
-			<!-- Do the left sidebar check and opens the primary div -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
+		<div class="col-md-2">
+			Search Filters (TBI)
+		</div>
+
+		<div class="col-md-10 content-area" id="primary">
 
 			<main class="site-main" id="main">
 
@@ -30,7 +33,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<header class="page-header">
 
-							<h1 class="page-title">
+							<h1 class="page-title mb-3">
 								<?php
 								printf(
 									/* translators: %s: query term */
@@ -66,9 +69,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<!-- The pagination component -->
 			<?php understrap_pagination(); ?>
-
-			<!-- Do the right sidebar check -->
-			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
 
 		</div><!-- .row -->
 

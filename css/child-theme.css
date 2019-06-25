@@ -12076,12 +12076,18 @@ newsletter-title {
 
 .listing-item img {
   float: left;
-  width: 100px; }
+  height: 100%;
+  padding-right: 5px; }
 
 .listing-item {
-  font-size: 9pt;
-  clear: both;
-  margin: 5px 0; }
+  height: 120px;
+  padding: 0;
+  text-align: left;
+  margin-bottom: 10px; }
+
+.listing-item .title {
+  font-weight: bold;
+  font-size: 10pt; }
 
 .tagcloud a {
   font-family: Ubuntu,sans-serif;
@@ -12121,7 +12127,17 @@ newsletter-title {
 .tagcloud a:nth-child(9n+8) {
   background-color: #F60; }
 
-.related-posts {
-  margin-top: 15px; }
+.related-posts h2 {
+  margin-top: 15px;
+  border-bottom: 1px solid #ccc; }
+
+.about-card {
+  font-size: 10pt; }
+
+.about-card .card-header {
+  font-size: 11pt; }
+
+.search-result {
+  display: inline-block; }
 
 /*# sourceMappingURL=child-theme.css.map */

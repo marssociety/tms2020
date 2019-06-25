@@ -182,12 +182,22 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 require get_stylesheet_directory() . '/classes/class-tms2020-svg-icons.php';
 require get_stylesheet_directory() . '/inc/icon-functions.php';
 
+add_filter( 'get_the_archive_title', function ($title) {
+    if ( is_category() ) {
+            $title = single_cat_title( '', false );
+        } elseif ( is_tag() ) {
+            $title = single_tag_title( 'Topic Area: ', false );
+        }
+
+    return $title;
+
+});
+
 add_theme_support( 'post-thumbnails' );
 add_image_size( 'front-post-thumbnail', 375, 280, true );
 add_image_size( 'front-featured-post-thumbnail', 815, 455, true );
-add_image_size( 'single-post-thumbnail', 815, 455, true );
+add_image_size( 'single-post-thumbnail', 543, 303, true );
 add_image_size( 'related-post-thumbnail', 543, 303, true );
-
 
 function remove_img_attr ($html)
 {

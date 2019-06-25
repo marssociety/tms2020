@@ -31,7 +31,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						$queryObject = new  Wp_Query( array(
 							'showposts' => 6,
 							'post_type' => array('post'),
-							'category_name' => 'news-announcements',
+							'category_name' => 'news',
 							'orderby' => 1,
 							));
 							

@@ -22,7 +22,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="page-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+	<div class="container-full ml-4 mr-4" id="content" tabindex="-1">
 
 		<div class="row">
 
@@ -45,9 +45,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<?php endwhile; // end of the loop. ?>
 
 			</main><!-- #main -->
-
-			<!-- Do the right sidebar check -->
-			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
 
 		</div><!-- .row -->
 
