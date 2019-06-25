@@ -50,7 +50,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					$my_query = new wp_query( $args );
 					if( $my_query->have_posts() ) { ?>
 						<div class="related-posts"><h2>Related News & Announcements</h2>
-							<div class="container-fixed">
+							<div class="container-fixed mt-3">
 								<div class="row">
 						<?php
 							$i=0;
@@ -60,7 +60,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 								<div class="col-4 col-md-4">
 									<div class="relatedthumb"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_post_thumbnail('related-post-thumbnail'); ?></a></div>
 										<div class="relatedcontent">
-										<h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+										<h3 class="related-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
 										<?php the_excerpt(); ?>
 									</div>
 								</div>

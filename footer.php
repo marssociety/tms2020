@@ -42,9 +42,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
 						<div class="row">
 							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-							<div class="footer-heading">
+							<div class="footer-heading" data-toggle="collapse" data-target="#footer1-menu" aria-controls="footer1-menu" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
 								<span>The Society
-									<i class="footer-toggler fa fa-plus tms-red pl-2" data-toggle="collapse" data-target="#footer1-menu" aria-controls="footer1-menu" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>"></i>
+									<i class="footer-toggler fa fa-plus tms-red pl-2"></i>
 								</span>
 							</div>
 								<?php wp_nav_menu(
@@ -61,9 +61,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 								); ?>
 							</div>
 							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-							<div class="footer-heading">
+							<div class="footer-heading" data-toggle="collapse" data-target="#footer2-menu" aria-controls="footer2-menu" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
 								<span>Projects
-									<i class="footer-toggler fa fa-plus tms-red pl-2" data-toggle="collapse" data-target="#footer2-menu" aria-controls="footer2-menu" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>"></i>
+									<i class="footer-toggler fa fa-plus tms-red pl-2"></i>
 								</span>
 							</div>
 								<?php wp_nav_menu(
@@ -81,9 +81,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 							</div>
 
 							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-							<div class="footer-heading">
+							<div class="footer-heading" data-toggle="collapse" data-target="#footer3-menu" aria-controls="footer3-menu" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
 								<span>Education &amp; Outreach
-									<i class="footer-toggler fa fa-plus tms-red pl-2" data-toggle="collapse" data-target="#footer3-menu" aria-controls="footer3-menu" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>"></i>
+									<i class="footer-toggler fa fa-plus tms-red pl-2"></i>
 								</span>
 							</div>
 								<?php wp_nav_menu(

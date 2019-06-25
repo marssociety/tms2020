@@ -14,9 +14,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<header class="entry-header">
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php if (is_singular('post')) : ?>
+			<?php the_title( '<h1 class="entry-title large-title">', '</h1>' ); ?>
+		<?php else : ?>
+			<?php the_title( '<h1 class="entry-title search-result-title">', '</h1>' ); ?>
+		<?php endif; ?>
 
-		<div class="container row entry-meta m-0 p-0">
+		<div class="container row entry-meta mt-2 ml-0 mr-0 p-0">
 			<div class="col-3 col-md-3 pl-0">
 				<?php understrap_posted_on(); ?>
 			</div>

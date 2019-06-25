@@ -152,7 +152,6 @@ a.nav-link:hover {
 
 .front-page-header {
   color:#0a2b72;
-  text-transform:uppercase; 
 }
 
 .front-page-more-link a {
@@ -170,12 +169,10 @@ a.nav-link:hover {
 
 .front-page-featured-post-title {
   line-height: 1; 
-  text-transform: uppercase;   
 }
 
 .front-page-post-title {
   line-height: 0.7; 
-  text-transform: uppercase;   
 }
 
 .front-page-post-excerpt {
@@ -222,7 +219,6 @@ a.tms2020-read-more-link {
 }
 
 .video-headline a {
-  text-transform: uppercase;   
   color:#0a2b72;
   display:inline-block;
   font-size:22pt;
@@ -547,9 +543,13 @@ newsletter-title {
   padding:0;
 }
 
+.large-title {
+  font-size:24pt !important;
+  padding-bottom:5px;
+}
+
 .post .entry-title {
-  text-transform:uppercase;
-  font-size:24pt;
+  font-size:18pt;
   border-bottom:1px solid #ccc;
 }
 
@@ -651,22 +651,41 @@ newsletter-title {
 
   .related-posts h2 {
     margin-top:15px;
+    padding-bottom:5px;
     border-bottom:1px solid #ccc;
   }
 
+  .related-title {
+    font-size:16pt;
+    padding-top:10px;
+  }
+
   .about-card {
-    font-size:10pt;
+    font-size:11pt;
   }
 
   .about-card .card-header {
-    font-size:11pt;
+    font-size:12pt;
   }
 
   .search-result {
     display:inline-block;
   }
 
+  .search-result-title a {
+    color:#0a2b72;
+  }
+
+  #page-wrapper, #archive-wrapper {
+    padding:0;
+  }
+
+  #page-wrapper #content {
+    margin-bottom:50px;
+  }
+
 @media screen and (max-width: 768px) {
 
+  .search { position:static; }
 
 }

@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
             <?php
             the_title(
-                sprintf( '<div class="border-0 entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+                sprintf( '<div class="border-0 entry-title search-result-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
                 '</a></div>'
             );
             ?>

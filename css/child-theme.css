@@ -11745,8 +11745,7 @@ a.nav-link:hover {
   top: 28%; }
 
 .front-page-header {
-  color: #0a2b72;
-  text-transform: uppercase; }
+  color: #0a2b72; }
 
 .front-page-more-link a {
   color: #0a2b72;
@@ -11760,12 +11759,10 @@ a.nav-link:hover {
   color: #858585; }
 
 .front-page-featured-post-title {
-  line-height: 1;
-  text-transform: uppercase; }
+  line-height: 1; }
 
 .front-page-post-title {
-  line-height: 0.7;
-  text-transform: uppercase; }
+  line-height: 0.7; }
 
 .front-page-post-excerpt {
   font-size: 10pt; }
@@ -11804,7 +11801,6 @@ a.tms2020-read-more-link {
   height: 100%; }
 
 .video-headline a {
-  text-transform: uppercase;
   color: #0a2b72;
   display: inline-block;
   font-size: 22pt;
@@ -12046,9 +12042,12 @@ newsletter-title {
 .post {
   padding: 0; }
 
+.large-title {
+  font-size: 24pt !important;
+  padding-bottom: 5px; }
+
 .post .entry-title {
-  text-transform: uppercase;
-  font-size: 24pt;
+  font-size: 18pt;
   border-bottom: 1px solid #ccc; }
 
 .post-tags a, .post-tags i {
@@ -12129,15 +12128,33 @@ newsletter-title {
 
 .related-posts h2 {
   margin-top: 15px;
+  padding-bottom: 5px;
   border-bottom: 1px solid #ccc; }
 
+.related-title {
+  font-size: 16pt;
+  padding-top: 10px; }
+
 .about-card {
-  font-size: 10pt; }
+  font-size: 11pt; }
 
 .about-card .card-header {
-  font-size: 11pt; }
+  font-size: 12pt; }
 
 .search-result {
   display: inline-block; }
+
+.search-result-title a {
+  color: #0a2b72; }
+
+#page-wrapper, #archive-wrapper {
+  padding: 0; }
+
+#page-wrapper #content {
+  margin-bottom: 50px; }
+
+@media screen and (max-width: 768px) {
+  .search {
+    position: static; } }
 
 /*# sourceMappingURL=child-theme.css.map */
