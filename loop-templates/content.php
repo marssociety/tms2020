@@ -22,10 +22,12 @@ if ( ! defined( 'ABSPATH' ) ) {
             );
             ?>
 
-            <?php if ( 'post' == get_post_type() ) : ?>
-
-                <?php the_post_thumbnail('thumbnail', ['class' => 'pr-3 float-left', 'title' => 'Featured image']); ?>
-
+            <?php if ( 'post' == get_post_type() ) : 
+                	if ( has_post_thumbnail() ) {
+                        the_post_thumbnail('thumbnail', ['class' => 'pr-3 float-left', 'title' => 'Thumbnail']);
+                    } else { 
+                            echo '<img src="' . '/wp-content/themes/tms2020/img/TMS_Placeholder_Image_150x150.jpg' . '" class="pr-3 float-left" title="Thumbnail" />'; 
+                    } 	?>
                 <div class="entry-meta">
                     <?php understrap_posted_on(); ?>
                 </div><!-- .entry-meta -->

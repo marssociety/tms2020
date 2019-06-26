@@ -23,7 +23,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 			
 			<main class="site-main" id="main">
 
-				<?php while ( have_posts() ) : the_post(); ?>
+				<?php 
+					$i=0;
+					while ( have_posts() ) : the_post(); ?>
 
 					<?php get_template_part( 'loop-templates/content', 'single' ); ?>
 
@@ -53,7 +55,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<div class="container-fixed mt-3">
 								<div class="row">
 						<?php
-							$i=0;
 							while( $my_query->have_posts() ):
 								$my_query->the_post(); ?>
 
@@ -66,16 +67,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 								</div>
 						<?php
 							endwhile;
-							wp_reset_postdata();
-					}
-					?> 
+							wp_reset_postdata(); ?>
 							</div><!--row-->
 						</div><!--container-->
 					</div><!--related-->
-
-				<?php
-						$i++;
-						endwhile; // end of the loop. ?>
+			<?php 	}	
+					$i++;
+					endwhile; // end of the loop. ?>
 
 			</main><!-- #main -->
 

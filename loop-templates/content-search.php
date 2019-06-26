@@ -13,10 +13,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <div class="search-result mt-3 pb-3 border-bottom">
 
-    <?php the_post_thumbnail('thumbnail', ['class' => 'pr-3 float-left', 'title' => 'Featured image']); ?>
+    <?php 	if ( has_post_thumbnail() ) {
+                    the_post_thumbnail('thumbnail', ['class' => 'pr-3 float-left', 'title' => 'Thumbnail']);
+			} else { 
+					echo '<img src="' . '/wp-content/themes/tms2020/img/TMS_Placeholder_Image_150x150.jpg' . '" class="pr-3 float-left" title="Thumbnail" />'; 
+			} 	?>
 
         <header class="entry-header">
-
             <?php
             the_title(
                 sprintf( '<div class="search-result-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),

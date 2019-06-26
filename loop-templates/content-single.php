@@ -32,9 +32,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</header><!-- .entry-header -->
 
 	<div class="entry-content mt-3">
-		<?php $imageurl = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-thumbnail' ); ?>
-		<a href="<?php echo $imageurl[0]; ?>"><?php the_post_thumbnail('single-post-thumbnail', ['class' => 'pl-3 float-right', 'title' => 'Featured image']); ?></a>
-
+		<?php 	if ( has_post_thumbnail() ) {
+					$imageurl = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-thumbnail' ); ?>
+				<a href="<?php echo $imageurl[0]; ?>"><?php the_post_thumbnail('single-post-thumbnail', ['class' => 'pl-3 float-right', 'title' => 'Featured image']); ?></a>
+		<?php	} else { 
+					$imageurl = '/wp-content/themes/tms2020/img/TMS_Placeholder_Image.jpg'; ?>
+				<a href="<?php echo $imageurl; ?>"><img src="<?php echo $imageurl; ?>" width="543" class="pl-3 float-right" title="Featured image" /></a>
+		<?php	} 	?>
 		<?php the_content(); ?>
 
 		<?php
