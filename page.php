@@ -22,29 +22,33 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="page-wrapper">
 
-	<div class="container-full ml-4 mr-4" id="content" tabindex="-1">
+	<div class="container-full" id="content" tabindex="-1">
 
 		<div class="row">
 
 			<!-- Do the left sidebar check -->
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
-			<main class="site-main" id="main">
+			<div class="col-10 col-md-10 col-sm-12">
 
-				<?php while ( have_posts() ) : the_post(); ?>
+				<main class="site-main" id="main">
 
-					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
+					<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-					?>
+						<?php get_template_part( 'loop-templates/content', 'page' ); ?>
 
-				<?php endwhile; // end of the loop. ?>
+						<?php
+						// If comments are open or we have at least one comment, load up the comment template.
+						if ( comments_open() || get_comments_number() ) :
+							comments_template();
+						endif;
+						?>
 
-			</main><!-- #main -->
+					<?php endwhile; // end of the loop. ?>
+
+				</main><!-- #main -->
+
+			</div>
 
 		</div><!-- .row -->
 

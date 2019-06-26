@@ -21,11 +21,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php endif; ?>
 
 		<div class="container row entry-meta mt-2 ml-0 mr-0 p-0">
-			<div class="col-3 col-md-3 pl-0">
+			<div class="col-12 col-md-3 col-sm-12 post-date">
 				<?php understrap_posted_on(); ?>
 			</div>
-			<div class="col-6 col-md-6 post-tags p-0 text-center"><?php the_tags('<i class="fa fa-tag"></i> ', ', '); ?></div>
-			<div class="col-3 col-md-3 post-category pr-0 mr-0 text-right">
+			<div class="col-12 col-md-6 col-sm-12 post-tags p-0"><?php the_tags('<i class="fa fa-tag"></i> ', ', '); ?></div>
+			<div class="col-12 col-md-3 col-sm-12 post-category">
 				<?php $category = get_the_category(); echo '<a class="category" href="'.get_category_link($category[0]->term_id ).'">'.$category[0]->cat_name.'</a>'; ?>
 			</div>
 		</div><!-- .row -->

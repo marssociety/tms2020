@@ -58,7 +58,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							while( $my_query->have_posts() ):
 								$my_query->the_post(); ?>
 
-								<div class="col-12 col-md-4 col-sm-12">
+								<div class="col-4 col-md-4">
 									<div class="relatedthumb"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_post_thumbnail('related-post-thumbnail'); ?></a></div>
 										<div class="relatedcontent">
 										<h3 class="related-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>

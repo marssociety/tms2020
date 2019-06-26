@@ -11936,11 +11936,11 @@ newsletter-title {
 .footer-container {
   margin: 25px; }
 
-.footer-primary-div {
-  padding-left: 80px; }
-
 .footer-branding {
   margin-top: 150px; }
+
+#content {
+  margin: 0 15px; }
 
 @media (min-width: 768px) {
   .collapse.dont-collapse-sm {
@@ -12050,8 +12050,17 @@ newsletter-title {
   font-size: 18pt;
   border-bottom: 1px solid #ccc; }
 
+.post-date {
+  padding-left: 0; }
+
 .post-tags a, .post-tags i {
-  font-size: 12pt; }
+  font-size: 12pt;
+  text-align: center; }
+
+.post-category {
+  text-align: right;
+  padding-right: 0;
+  margin-right: 0; }
 
 .post-category a {
   font-size: 12pt;
@@ -12153,7 +12162,22 @@ newsletter-title {
 #page-wrapper #content {
   margin-bottom: 50px; }
 
+.wp-block-embed__wrapper:before {
+  padding-top: 0 !important; }
+
 @media screen and (max-width: 768px) {
+  #content {
+    margin: 0 5px !important; }
+  #primary {
+    padding: 0 !important; }
+  .post-date {
+    padding-left: 15px; }
+  .post-tags {
+    text-align: left; }
+  .post-category {
+    text-align: left; }
+  .wp-post-image {
+    padding-left: 0 !important; }
   .search {
     position: static; } }
 

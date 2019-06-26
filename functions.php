@@ -36,7 +36,47 @@ add_action( 'after_setup_theme', 'add_child_theme_tms2020' );
 // Register Custom Post Types
 add_action('init', 'register_custom_posts_init');
 function register_custom_posts_init() {
-    // Register Projects
+    // Register Conventions
+    $conventions_labels = array(
+		'name'                  => _x( 'Conventions', 'Post Type General Name', 'tms2020' ),
+		'singular_name'         => _x( 'Convention', 'Post Type Singular Name', 'tms2020' ),
+		'menu_name'             => __( 'Conventions', 'tms2020' ),
+		'name_admin_bar'        => __( 'Conventions', 'tms2020' ),
+		'archives'              => __( 'Convention Archives', 'tms2020' ),
+		'attributes'            => __( 'Convention Attributes', 'tms2020' ),
+		'parent_item_colon'     => __( 'Parent Convention:', 'tms2020' ),
+		'all_items'             => __( 'All Conventions', 'tms2020' ),
+		'add_new_item'          => __( 'Add New Convention', 'tms2020' ),
+		'add_new'               => __( 'Add Convention', 'tms2020' ),
+		'new_item'              => __( 'New Convention', 'tms2020' ),
+		'edit_item'             => __( 'Edit Convention', 'tms2020' ),
+		'update_item'           => __( 'Update Convention', 'tms2020' ),
+		'view_item'             => __( 'View Convention', 'tms2020' ),
+		'view_items'            => __( 'View Conventions', 'tms2020' ),
+		'search_items'          => __( 'Search Convention', 'tms2020' ),
+		'not_found'             => __( 'Not found', 'tms2020' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'tms2020' ),
+		'featured_image'        => __( 'Featured Image', 'tms2020' ),
+		'set_featured_image'    => __( 'Set featured image', 'tms2020' ),
+		'remove_featured_image' => __( 'Remove featured image', 'tms2020' ),
+		'use_featured_image'    => __( 'Use as featured image', 'tms2020' ),
+		'insert_into_item'      => __( 'Insert into Convention', 'tms2020' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', 'tms2020' ),
+		'items_list'            => __( 'Convention list', 'tms2020' ),
+		'items_list_navigation' => __( 'Convention list navigation', 'tms2020' ),
+        'filter_items_list'     => __( 'Filter Convention list', 'tms2020' ),
+        );
+    $conventions_args = array(
+        'labels'             => $conventions_labels,
+        'public'             => true,
+        'capability_type'    => 'post',
+		'menu_position'       => 10,
+        'has_archive'        => true,
+        'supports'           => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions' )
+    );
+	register_post_type('conventions', $conventions_args);
+	
+	// Register Projects
     $projects_labels = array(
 		'name'                  => _x( 'Projects', 'Post Type General Name', 'tms2020' ),
 		'singular_name'         => _x( 'Project', 'Post Type Singular Name', 'tms2020' ),
