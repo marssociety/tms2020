@@ -22,7 +22,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<div class="row m-0">
 
-			<div class="col-md-9 content-area" id="primary">
+			<div class="col-12 col-lg-9 col-sm-12 content-area" id="primary">
 			
 			<main class="site-main" id="main">
 
