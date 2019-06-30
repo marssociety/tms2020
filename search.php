@@ -21,12 +21,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<div class="row m-0">
 
+	<!--
 		<div class="col-md-2">
 			Search Filters (TBI)
 		</div>
 
 		<div class="col-md-10 content-area" id="primary">
-
+	-->
+		<div class="col content-area" id="primary">
 			<main class="site-main" id="main">
 
 				<?php if ( have_posts() ) : ?>

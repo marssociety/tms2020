@@ -101,7 +101,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 pr-4 text-right">
+					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 text-right">
 						<?php if ( has_nav_menu( 'social' ) ) : ?>
 							<nav class="social-navigation social-navigation-footer" aria-label="<?php esc_attr_e( 'Social Links Menu', 'tms2020' ); ?>">
 								<?php
@@ -123,11 +123,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				</div><!-- .site-info -->
 
-				<div class="row">
-					<div class="col-md-12 col-sm-12 text-center footer-bottom-links">
-						<a href="#">Privacy Policy</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
-						<a href="#">Anti-Discrimination Policy</a> &nbsp;&nbsp;|&nbsp;&nbsp;
-						Copyright &copy; 1998-2019 The Mars Society. All Rights Reserved.
+				<div class="row m-0">
+					<div class="col-md-12 col-sm-12 text-center footer-bottom-links p-0">
+						<a href="#">Privacy Policy</a> <span style="padding:0 10px;">|</span>
+						<a href="#">Anti-Discrimination Policy</a> <span style="padding:0 10px;">|</span>
+						<span style="white-space: nowrap;">Copyright &copy; 1998-2019 The Mars Society.</span> All Rights Reserved.
 					</div>
 				</div>
 		</div><!-- container end -->

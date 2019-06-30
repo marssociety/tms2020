@@ -10,12 +10,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header();
-$container = get_theme_mod( 'understrap_container_type' );
+
 ?>
 
 <div class="wrapper" id="single-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+	<div class="container-full ml-4 mr-4" id="content" tabindex="-1">
 
 		<div class="row">
 
@@ -26,7 +26,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'loop-templates/content', 'single' ); ?>
+					<?php get_template_part( 'loop-templates/content', 'video' ); ?>
 
 					<?php understrap_post_nav(); ?>
 

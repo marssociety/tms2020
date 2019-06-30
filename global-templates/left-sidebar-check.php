@@ -13,4 +13,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php get_template_part( 'sidebar-templates/sidebar', 'left' ); ?>
 <?php endif; ?>
 
-<div class="col-md content-area" id="primary">
+<div class="col-12 col-md-10 col-sm-12" id="primary">

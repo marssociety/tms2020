@@ -116,6 +116,7 @@ function register_custom_posts_init() {
     );
     register_post_type('projects', $projects_args);
 
+	// Register Videos
     $videos_labels = array(
 		'name'                  => _x( 'Videos', 'Post Type General Name', 'tms2020' ),
 		'singular_name'         => _x( 'Video', 'Post Type Singular Name', 'tms2020' ),

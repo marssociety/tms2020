@@ -27,7 +27,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					$i=0;
 					while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'loop-templates/content', 'single' ); ?>
+					<?php get_template_part( 'loop-templates/content', 'convention' ); ?>
 
 					<?php
 					// If comments are open or we have at least one comment, load up the comment template.
