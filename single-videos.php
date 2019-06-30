@@ -17,7 +17,7 @@ get_header();
 
 	<div class="container-full ml-4 mr-4" id="content" tabindex="-1">
 
-		<div class="row">
+		<div class="row m-0">
 
 			<!-- Do the left sidebar check -->
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
