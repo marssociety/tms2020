@@ -46,7 +46,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<?php the_post_thumbnail('front-featured-post-thumbnail',array( 'class' => 'h-100 img-fluid border-0 m-0 p-0' ) ); ?>
 						</div>
 						<div class="col">
-							<div class="card-block px-2 post-item post-info front-page-post-info">
+							<div class="card-block post-item post-info front-page-post-info">
 								<div class="card-text front-page-post-date p-2"><?php the_time('F jS, Y'); ?></div>
 								<h2 class="card-title post-title front-page-featured-post-title p-2"><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 								<div class="card-text post-content front-page-post-excerpt p-2"><?php the_excerpt(); ?></div>
