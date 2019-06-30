@@ -42,9 +42,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
 						<div class="row">
 							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-							<div class="footer-heading" data-toggle="collapse" data-target="#footer1-menu" aria-controls="footer1-menu" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
+							<div class="footer-heading" data-toggle="collapse navbar-toggleable-sm" data-target="#footer1-menu" aria-controls="footer1-menu" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
 								<span>The Society
-									<i class="footer-toggler fa fa-plus tms-red pl-2"></i>
+									<i class="footer-toggler hidden-md-up fa fa-plus tms-red pl-2"></i>
 								</span>
 							</div>
 								<?php wp_nav_menu(

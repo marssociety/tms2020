@@ -31,13 +31,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
-        <nav class="navbar navbar-expand-md navbar-light border-bottom">
+        <nav class="navbar navbar-light navbar-expand-lg border-bottom">
                  <a class="navbar-brand my-2" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><img class="tms-logo img-fluid" src="/wp-content/themes/tms2020/img/MarsSociety_Main_Logo.jpg" alt="The Mars Society" /></a>
-                    
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown,#navbarToggleSearch" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
+                                    
                 <?php if ( has_nav_menu( 'social' ) ) : ?>
                     <ul class="social-navigation navbar-nav my-4 ml-auto mr-2" aria-label="<?php esc_attr_e( 'Social Links Menu', 'tms2020' ); ?>">
                         <?php
@@ -53,16 +49,18 @@ $container = get_theme_mod( 'understrap_container_type' );
                         ?>
                     </ul><!-- .social-navigation -->
                <?php endif; ?>
-
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             </nav>
-            <nav class="navbar navbar-expand-md navbar-light border-bottom">
+            <nav class="navbar navbar-light navbar-expand-lg border-bottom">
                 <!-- The WordPress Menu goes here -->
 				<?php wp_nav_menu(
 					array(
 						'theme_location'  => 'primary',
 						'container_class' => 'collapse navbar-collapse',
 						'container_id'    => 'navbarNavDropdown',
-						'menu_class'      => 'navbar-nav nav-fill navbar-main w-100',
+						'menu_class'      => 'navbar-nav navbar-main nav-fill w-100',
 						'fallback_cb'     => '',
 						'menu_id'         => 'main-menu',
 						'depth'           => 2,

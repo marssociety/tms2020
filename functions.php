@@ -209,7 +209,7 @@ function register_custom_menus() {
 
 add_action( 'init', 'register_custom_menus' );
 function custom_excerpt_length( $length ) {
-	return 20;
+	return 80;
 }
 
 function ea_primary_menu_extras( $menu, $args ) {

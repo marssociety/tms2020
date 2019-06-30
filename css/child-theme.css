@@ -11613,8 +11613,8 @@ body {
 
 .navbar {
   padding: 0 !important;
-  -ms-flex-wrap: wrap !important;
-      flex-wrap: wrap !important;
+  -ms-flex-wrap: nowrap !important;
+      flex-wrap: nowrap !important;
   line-height: 1em; }
 
 .navbar-brand {
@@ -11631,12 +11631,15 @@ body {
   max-width: 424px;
   max-height: 76px; }
 
+.nav-link {
+  -ms-flex-wrap: nowrap !important;
+      flex-wrap: nowrap !important; }
+
 a.nav-link:hover {
   color: #aaa; }
 
 .navbar-row {
   text-align: left;
-  width: auto;
   border-bottom: 1px solid #cccccc;
   clear: both;
   -ms-flex-wrap: nowrap;
@@ -11778,7 +11781,8 @@ a.nav-link:hover {
   line-height: 0.7; }
 
 .front-page-post-excerpt {
-  font-size: 10pt; }
+  font-size: 10pt;
+  text-align: justify; }
 
 .front-page-featured-post-title a {
   color: #0a2b72;
@@ -11856,7 +11860,8 @@ a.tms2020-read-more-link {
   text-transform: uppercase; }
 
 .video-description {
-  font-size: 10pt; }
+  font-size: 10pt;
+  text-align: justify; }
 
 .newsletter-signup-section {
   text-align: center;
@@ -11985,8 +11990,10 @@ newsletter-title {
   margin: 0 15px; }
 
 @media (max-width: 1024px) {
-  .nav-fill .nav-link {
-    font-size: 11pt; } }
+  .navbar-main .nav-link {
+    font-size: 10pt; }
+  .project-title h2 {
+    font-size: 14pt; } }
 
 @media screen and (max-width: 768px) {
   #main-menu {
@@ -12012,6 +12019,8 @@ newsletter-title {
   .navbar-brand {
     padding: 3px;
     width: 73%; }
+  .navbar-main .nav-link {
+    font-size: 9pt; }
   .tms-logo {
     width: 100% !important;
     height: auto !important; }
@@ -12019,6 +12028,10 @@ newsletter-title {
     margin: 0 15px; }
   .front-page-featured-post, .front-page-post {
     margin-bottom: 30px; }
+  .front-page-posts-second-row {
+    padding: 0 10px; }
+  .front-page-post {
+    padding: 0 5px; }
   .front-page-posts-second-row {
     margin-top: 0 !important; }
   .navbar-search {

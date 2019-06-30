@@ -7071,7 +7071,7 @@ jQuery(function($){
     }
 
     $(window).resize(function() {
-        if ($(window).width() > 768) {
+        if ($(window).width() >= 768) {
             $('#footer1-menu').collapse({
                 show:true
             });

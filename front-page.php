@@ -80,7 +80,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		</div><!-- row -->
 
 		<div class="row">
-			<div class="col-12 mt-3 text-right front-page-more-link"><a href="/category/news-announcements/">See All ></a></div>
+			<div class="col-12 mt-3 text-right front-page-more-link"><a href="/news/">See All ></a></div>
 		</div><!-- row -->
 	</div><!-- container -->
 
@@ -197,7 +197,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<div class="col-5 col-md-5 col-xs-5 text-center mt-auto mb-auto project-title">
 								<a href="<?php the_field('project_website_url'); ?>"><h2><?php echo $title; ?></h2></a>
 							</div>
-							<div class="col-2 col-md-1 col-xs-2 text-center mt-auto mb-auto">
+							<div class="col-2 col-md-1 col-xs-2 text-center p-0 mt-auto mb-auto">
 								<a href="<?php the_field('project_website_url'); ?>"><i class="fa fa-chevron-right fa-2x tms-red"></i></a>
 							</div>
 						</div>
