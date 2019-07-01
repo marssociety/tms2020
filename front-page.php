@@ -42,10 +42,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="col-md-9 front-page-featured-post">
 				<div class="card h-100">
 					<div class="row no-gutters h-100">
-						<div class="col-auto">
+						<div class="col-12 col-md-9 col-sm-12">
 							<?php the_post_thumbnail('front-featured-post-thumbnail',array( 'class' => 'h-100 img-fluid border-0 m-0 p-0' ) ); ?>
 						</div>
-						<div class="col">
+						<div class="col-12 col-md-3 col-sm-12">
 							<div class="card-block post-item post-info front-page-post-info">
 								<div class="card-text front-page-post-date p-2"><?php the_time('F jS, Y'); ?></div>
 								<h2 class="card-title post-title front-page-featured-post-title p-2"><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
